@@ -113,9 +113,8 @@ namespace Domain.Services.Impl
 
 
             StringBuilder sb = new StringBuilder();
-            StringBuilder sbTmp = new StringBuilder();
-            string title = String.Join(", ", typeof(TicketList).GetProperties().Select(p => p.Name));
-            sb.AppendLine(title);
+            
+            sb.AppendLine(String.Join(", ", typeof(TicketList).GetProperties().Select(p => p.Name)));
 
             foreach (TicketList tmpElement in list)
             {
